@@ -1,0 +1,22 @@
+server {
+	listen  80;
+	# this path MUST be exactly as docker-compose.fpm.volumes,
+	# even if it doesn't exists in this dock.
+	root /code;
+	index index.html index.php index.htm;
+	server_name 172.17.0.1;
+	location / {
+		autoindex on;
+		index index.php;
+        try_files $uri $uri/ /index.php;
+	}
+
+	location ~ \.php$ {
+		fastcgi_pass phpfpm:9000;
+	    fastcgi_index index.php;
+	    fastcgi_split_path_info ^(.+\.php)(.*)$;
+	    include fastcgi_params;
+	    fastcgi_read_timeout 300;
+	    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	}
+}
