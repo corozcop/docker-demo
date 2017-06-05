@@ -17,8 +17,10 @@ phpfpm:
     - ./public_html:/code
 mysql:
   image: mariadb
+  volumes:
+    - /var/lib/mysql
+    - ./backup:/backup
   ports:
     - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: password
-
