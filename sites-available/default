@@ -5,7 +5,7 @@ server {
 	# even if it doesn't exists in this dock.
 	root /code;
 	index index.html index.php index.htm;
-	server_name localhost;
+	server_name localhost; #172.17.0.1
 	location / {
 		autoindex on;
 		index index.php;

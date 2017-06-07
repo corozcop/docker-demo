@@ -27,3 +27,15 @@ mysql:
     - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: password
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  restart: always
+  links:
+    - mysql
+  ports:
+    - 8183:80
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+    PMA_ARBITRARY: 1
+    PMA_HOST : 172.17.0.1
