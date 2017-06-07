@@ -12,9 +12,12 @@ nginx:
   links:
         - phpfpm
 phpfpm:
-  image: php:fpm
-  volumes:
+    image: 'bitnami/php-fpm'
+    ports:
+        - '9000:9000'
+    volumes:
     - ./public_html:/code
+
 mysql:
   image: mariadb
   volumes:

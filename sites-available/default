@@ -1,10 +1,11 @@
 server {
+	sendfile  off;
 	listen  80;
 	# this path MUST be exactly as docker-compose.fpm.volumes,
 	# even if it doesn't exists in this dock.
 	root /code;
 	index index.html index.php index.htm;
-	server_name 172.17.0.1;
+	server_name localhost;
 	location / {
 		autoindex on;
 		index index.php;
