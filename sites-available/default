@@ -1,5 +1,5 @@
 server {
-	sendfile  off;
+
 	listen  80;
 	# this path MUST be exactly as docker-compose.fpm.volumes,
 	# even if it doesn't exists in this dock.
@@ -11,7 +11,7 @@ server {
 		index index.php;
         try_files $uri $uri/ /index.php;
 	}
-
+	sendfile  off;
 	location ~ \.php$ {
 		fastcgi_pass phpfpm:9000;
 	    fastcgi_index index.php;
