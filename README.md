@@ -1,4 +1,3 @@
-# docker-demo
 # Docker LAMP
 
 [![N|Solid](http://www.experttyce.com/wp-content/uploads/2016/12/Logomakr_1blDRm_titulo_190.png)](http://www.experttyce.com/)
