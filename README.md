@@ -34,14 +34,14 @@ docker-compose up -d
 
 ### Acceso
 
-Una vez que se encuentren ejecutandose los contenedores podemos entrar a nuestro sitio web entrando a  [http://localhost](http://localhost)
+Una vez que se encuentren ejecutandose los contenedores podemos entrar a nuestro sitio web  [http://localhost](http://localhost)
 Estan expuestos los puertos 
 - 80 de nginx
 - 3306 de mysql
 - 8183 de phpmyadmin [http://localhost:8183](http://localhost:8183)
 
 
-
+** Las contraseñas se encuentran dentro del archivo .yml
 
 
 
